@@ -3,7 +3,7 @@
 
 This is a simple ATM (Automated Teller Machine) simulation program implemented in Java. It provides basic functionalities such as:
 
-## $\textcolor{yellow}{Language\ Section :\}$
+## $\textcolor{green}{Language\ Section :\}$
   
 ![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/0aba50cc-3bd1-4044-ab7d-f386b31e449b)
 
