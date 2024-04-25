@@ -7,19 +7,19 @@ This is a simple ATM (Automated Teller Machine) simulation program implemented i
   
 ![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/0aba50cc-3bd1-4044-ab7d-f386b31e449b)
 
-### $\textcolor{yellow}{Password \ Management:\}$
+## $\textcolor{yellow}{Password \ Management:\}$
 
 ![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/b7f13af9-95e5-4f33-a55a-afe5513723ce)             ![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/0b022657-e5f1-444b-a91a-61be6f723ebf)
  
-### $\textcolor{yellow}{Cash  \ withdrawal :\}$
+## $\textcolor{yellow}{Cash  \ withdrawal :\}$
 
 ![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/43d45a3e-3dd5-424d-9365-9b321271e8bf)
 
-### $\textcolor{yellow}{Checking   \ account \ balance :\}$
+## $\textcolor{yellow}{Checking   \ account \ balance :\}$
 
 ![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/b47c634e-46f6-4556-89a1-b1891067ba49)
 
-### $\textcolor{yellow}{Transferring  \ money :\}$
+## $\textcolor{yellow}{Transferring  \ money :\}$
 
 ![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/4c402c68-808f-485e-9cd1-6f4dc16f4163)
 
