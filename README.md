@@ -1,5 +1,5 @@
 
-# ATM System
+# Java Swing ATM 
 
 This is a simple ATM (Automated Teller Machine) simulation program implemented in Java. It provides basic functionalities such as:
 
