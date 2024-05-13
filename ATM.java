@@ -9,7 +9,6 @@ import java.util.Locale;
 public class ATM {
     public static long cash_fee_withdrawal = 56350000;
     public static char[] pass = "1234".toCharArray();
-
     public static JLabel cashlabel;
     public static void main(String[] args) {
         JFrame f = new JFrame("ATM"); // Frame
@@ -40,26 +39,26 @@ public class ATM {
                 pagemain.setVisible(true);
             }
         });
-////////////////////////////// Persion Language Button /////////////////////////////////////////
-        JButton PersionButton = new JButton("فارسی ");
-        PersionButton.setBounds(600, 300, 100, 50);
-        PersionButton.setFont(new Font("Arial", Font.BOLD, 16));
-        PersionButton.setForeground(Color.BLACK);
-        PersionButton.setBackground(Color.lightGray);
-        PersionButton.setFocusable(false);
-        PersionButton.addActionListener(new ActionListener() {
+////////////////////////////// Persian Language Button /////////////////////////////////////////
+        JButton persianButton = new JButton("فارسی ");
+        persianButton.setBounds(600, 300, 100, 50);
+        persianButton.setFont(new Font("Arial", Font.BOLD, 16));
+        persianButton.setForeground(Color.BLACK);
+        persianButton.setBackground(Color.lightGray);
+        persianButton.setFocusable(false);
+        persianButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 pagelanguage.setVisible(false);
                 pagepassword.setVisible(true);
             }
         });
-///////////////////////////// Persion Language Text /////////////////////////////////////////
-        JLabel PersionLabel = new JLabel();
-        PersionLabel.setBounds(450, 315, 200, 20);
-        PersionLabel.setText("زبان خود را انتخاب کنید");
-        PersionLabel.setForeground(Color.BLACK);
-        PersionLabel.setFont(new Font("Arial", Font.BOLD, 16));
+///////////////////////////// Persian Language Text /////////////////////////////////////////
+        JLabel persianLabel = new JLabel();
+        persianLabel.setBounds(450, 315, 200, 20);
+        persianLabel.setText("زبان خود را انتخاب کنید");
+        persianLabel.setForeground(Color.BLACK);
+        persianLabel.setFont(new Font("Arial", Font.BOLD, 16));
 //////////////////////////////  English Label /////////////////////////////////////////
         JLabel EnglishLabel = new JLabel();
         EnglishLabel.setBounds(110, 315, 200, 20);
@@ -433,8 +432,8 @@ public class ATM {
 
 //////////////////////////////  Language Page Components /////////////////////////////////////////
         pagelanguage.add(EnglishButton);
-        pagelanguage.add(PersionButton);
-        pagelanguage.add(PersionLabel);
+        pagelanguage.add(persianButton);
+        pagelanguage.add(persianLabel);
         pagelanguage.add(EnglishLabel);
 
 //////////////////////////////  Password Page Components /////////////////////////////////////////
