@@ -87,7 +87,6 @@ public class ATM {
         JButton SubmitButton = new JButton("ثبت ");
         SubmitButton.setBounds(300, 620, 100, 50);
         SubmitButton.setFont(new Font("Arial", Font.BOLD, 16));
-//        SubmitButton.setVisible(false);
         SubmitButton.setForeground(Color.BLACK);
         SubmitButton.setBackground(Color.lightGray);
         SubmitButton.setFocusable(false);
@@ -257,19 +256,23 @@ public class ATM {
         withdrawalsubmit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                if (cash_fee_withdrawal - Long.parseLong(withdrawalfield.getText()) < 0)
-                    JOptionPane.showMessageDialog(f, "موجودی کافی نیست !", "موجودی", JOptionPane.WARNING_MESSAGE);
+                if (withdrawalfield.getText().isEmpty())
+                    JOptionPane.showMessageDialog(f, "مبلغ مورد نظر را وارد کنید :", "ّبرداشت", JOptionPane.WARNING_MESSAGE);
                 else {
-                    withdrawalpage.setVisible(false);
-                    lastpage.setVisible(true);
-                    String withdrawalamoutstr = withdrawalfield.getText();
-                    cash_fee_withdrawal -= Long.parseLong(withdrawalamoutstr);
-                    NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.US);
-                    String currency = formatter.format(cash_fee_withdrawal);
-                    cashlabel.setText("موجودی حساب شما : " + currency);
-                    withdrawalfield.setText(null);
-                }
+                    if (cash_fee_withdrawal - Long.parseLong(withdrawalfield.getText()) < 0)
+                        JOptionPane.showMessageDialog(f, "موجودی کافی نیست !", "موجودی", JOptionPane.WARNING_MESSAGE);
+                    else {
+                        withdrawalpage.setVisible(false);
+                        lastpage.setVisible(true);
+                        String withdrawalamoutstr = withdrawalfield.getText();
+                        cash_fee_withdrawal -= Long.parseLong(withdrawalamoutstr);
+                        NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.US);
+                        String currency = formatter.format(cash_fee_withdrawal);
+                        cashlabel.setText("موجودی حساب شما : " + currency);
+                        withdrawalfield.setText(null);
+                    }
 
+                }
             }
         });
 
@@ -388,6 +391,8 @@ public class ATM {
             public void actionPerformed(ActionEvent e) {
                 if (transfercardnumberfield.getText().length() != 16)
                     JOptionPane.showMessageDialog(f, "شماره کارت صحیح نیست !", "شماره کارت", JOptionPane.WARNING_MESSAGE);
+                if (transfermoneyfield.getText().isEmpty())
+                    JOptionPane.showMessageDialog(f, "ملبغ مورد نظر را وارد کنید", "کارت به کارت", JOptionPane.WARNING_MESSAGE);
                 else if (cash_fee_withdrawal - Long.parseLong(transfermoneyfield.getText()) < 0)
                     JOptionPane.showMessageDialog(f, "موجودی کافی نیست !", "موجودی", JOptionPane.WARNING_MESSAGE);
                 else {
