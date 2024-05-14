@@ -361,6 +361,7 @@ public class ATM {
         cash.add(cashsubmit);
         cash.add(BackGroundimageCash);
 
+
 //////////////////////////////  Transfer Page Components /////////////////////////////////////////
 
         ImageIcon imagetransferpage = new ImageIcon("Test3.jpg");
