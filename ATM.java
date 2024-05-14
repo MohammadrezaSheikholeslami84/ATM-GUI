@@ -12,15 +12,20 @@ public class ATM {
     public static JLabel cashlabel;
 
     public static void main(String[] args) {
+
+        ImageIcon image = new ImageIcon("Test3.jpg");
+        JLabel BackGround = new JLabel("", image, JLabel.CENTER);
+        BackGround.setBounds(0, 0, 700, 500);
+
         JFrame f = new JFrame("ATM"); // Frame
 ///////////////////////////  Initialize Pages ////////////////////////////////////////////
         JPanel pagelanguage = createPanel(0, 0, 700, 700, Color.CYAN, true);
-        JPanel pagepassword = createPanel(0, 0, 700, 700, Color.CYAN, false);
-        JPanel pagemain = createPanel(0, 0, 700, 700, Color.CYAN, false);
-        JPanel changepasspage = createPanel(0, 0, 700, 700, Color.CYAN, false);
-        JPanel cash = createPanel(0, 0, 700, 700, Color.CYAN, false);
-        JPanel withdrawalpage = createPanel(0, 0, 700, 700, Color.CYAN, false);
-        JPanel transferpage = createPanel(0, 0, 700, 700, Color.CYAN, false);
+        JPanel pagepassword = createPanel(0, 0, 700, 700, new Color(9, 93, 176), false);
+        JPanel pagemain = createPanel(0, 0, 700, 700, Color.DARK_GRAY, false);
+        JPanel changepasspage = createPanel(0, 0, 700, 700, new Color(9, 93, 176), false);
+        JPanel cash = createPanel(0, 0, 700, 700,new Color(9, 93, 176), false);
+        JPanel withdrawalpage = createPanel(0, 0, 700, 700, new Color(9, 93, 176), false);
+        JPanel transferpage = createPanel(0, 0, 700, 700, new Color(9, 93, 176), false);
         JPanel lastpage = createPanel(0, 0, 700, 700, Color.BLACK, false);
 ////////////////////////////////////////////////////////////////////////////////////////////////////  Language Page  /////////////////////////////////////////////////////////////////
 
@@ -55,14 +60,14 @@ public class ATM {
 ////////////////////////////////////////////////////////////////////////////////////////////////////  Password Page  //////////////////////////////////////////////////
 
 //////////////////////////////  Password Label /////////////////////////////////////////
-        JLabel EnterPassLabel = createLabel(300, 200, 200, 20, "رمز خود را وارد کنید ", Color.BLACK, 16);
+        JLabel EnterPassLabel = createLabel(300, 200, 200, 20, "رمز خود را وارد کنید ", Color.WHITE, 20);
 
 //////////////////////////////  Password Input Field /////////////////////////////////////////
         JPasswordField EnterPassField = new JPasswordField();
-        EnterPassField.setBounds(280, 250, 150, 30);
+        EnterPassField.setBounds(300, 250, 150, 30);
 
 ////////////////////////////// Password Submit Button /////////////////////////////////////////
-        JButton SubmitButton = createButton("ثبت ", 300, 620, 100, 50, 16, Color.black, Color.lightGray);
+        JButton SubmitButton = createButton("ثبت ", 300, 620, 100, 50, 16, Color.WHITE, new Color(51, 131, 156));
         SubmitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -134,13 +139,13 @@ public class ATM {
 //////////////////////////////////////////////////////////////////////////////////////////////////  Change Password page  ////////////////////////////////////////////////////////////
 
 //////////////////////////////  New Password Label /////////////////////////////////////////
-        JLabel EnterNewPassLabel = createLabel(300, 200, 220, 20, "رمز جدید خود را وارد کنید :", Color.BLACK, 16);
+        JLabel EnterNewPassLabel = createLabel(300, 200, 220, 20, "رمز جدید خود را وارد کنید :", Color.white, 20);
 
 //////////////////////////////  New Password Field /////////////////////////////////////////
         JPasswordField EnterNewPassField = new JPasswordField();
-        EnterNewPassField.setBounds(300, 250, 150, 30);
+        EnterNewPassField.setBounds(320, 250, 150, 30);
 //////////////////////////////  Submit New Pass Button /////////////////////////////////////////
-        JButton submitnewpass = createButton("تایید", 280, 400, 100, 50, 16, Color.black, Color.lightGray);
+        JButton submitnewpass = createButton("تایید", 280, 600, 100, 50, 16, Color.black, Color.lightGray);
         submitnewpass.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -157,7 +162,7 @@ public class ATM {
             }
         });
 //////////////////////////////  New Pass Page Back Button /////////////////////////////////////////
-        JButton Backtolastpagenewpass = createButton("برگشت", 380, 400, 100, 50, 16, Color.black, new Color(51, 131, 156));
+        JButton Backtolastpagenewpass = createButton("برگشت", 380, 600, 100, 50, 16, Color.black, new Color(51, 131, 156));
         Backtolastpagenewpass.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -170,10 +175,10 @@ public class ATM {
 
 //////////////////////////////  Withdrawal Field Input /////////////////////////////////////////
         JTextField withdrawalfield = new JTextField();
-        withdrawalfield.setBounds(280, 250, 150, 30);
+        withdrawalfield.setBounds(300, 250, 150, 30);
 
 //////////////////////////////  Withdrawal Submit Button /////////////////////////////////////////
-        JButton withdrawalsubmit = createButton("تایید", 250, 500, 110, 50, 16, Color.black, Color.lightGray);
+        JButton withdrawalsubmit = createButton("تایید", 250, 600, 110, 50, 16, Color.black, Color.lightGray);
         withdrawalsubmit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -197,11 +202,12 @@ public class ATM {
             }
         });
 
+
 //////////////////////////////  Withdrawal Text  /////////////////////////////////////////
-        JLabel withdrawaltext = createLabel(280, 200, 300, 20, "مبلغ مورد نظر را وارد کنید :", Color.BLACK, 16);
+        JLabel withdrawaltext = createLabel(280, 200, 300, 20, "مبلغ مورد نظر را وارد کنید :", Color.WHITE, 20);
 
 //////////////////////////////  Withdrawal Back Button /////////////////////////////////////////
-        JButton withdrawalback = createButton("برگشت", 360, 500, 110, 50, 16, Color.black, new Color(51, 131, 156));
+        JButton withdrawalback = createButton("برگشت", 360, 600, 110, 50, 16, Color.black, new Color(51, 131, 156));
         withdrawalback.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -216,10 +222,10 @@ public class ATM {
 
         NumberFormat formatter = NumberFormat.getCurrencyInstance(Locale.US);
         String currency = formatter.format(cash_fee_withdrawal);
-        cashlabel = createLabel(350, 315, 300, 20, "موجودی حساب شما : " + currency, Color.BLACK, 16);
+        cashlabel = createLabel(350, 315, 300, 20, "موجودی حساب شما : " + currency, Color.white, 20);
 
 //////////////////////////////  Cash Page Back Button /////////////////////////////////////////
-        JButton Backtolastpagecash = createButton("برگشت", 350, 400, 100, 50, 16, Color.black, new Color(51, 131, 156));
+        JButton Backtolastpagecash = createButton("برگشت", 350, 600, 100, 50, 16, Color.black, new Color(51, 131, 156));
         Backtolastpagecash.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -229,7 +235,7 @@ public class ATM {
         });
 
 //////////////////////////////  Cash Page Submit Button /////////////////////////////////////////
-        JButton cashsubmit = createButton("تایید", 250, 400, 100, 50, 16, Color.black, Color.lightGray);
+        JButton cashsubmit = createButton("تایید", 250, 600, 100, 50, 16, Color.black, Color.lightGray);
         cashsubmit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -242,18 +248,18 @@ public class ATM {
 
 ////////////////////////////// Transfer Card Input Field /////////////////////////////////////////
         JTextField transfercardnumberfield = new JTextField();
-        transfercardnumberfield.setBounds(280, 400, 150, 30);
+        transfercardnumberfield.setBounds(300, 400, 150, 30);
 ////////////////////////////// Transfer Money Input Field /////////////////////////////////////////
         JTextField transfermoneyfield = new JTextField();
-        transfermoneyfield.setBounds(280, 250, 150, 30);
+        transfermoneyfield.setBounds(300, 250, 150, 30);
 ////////////////////////////// Transfer Card Text /////////////////////////////////////////
-        JLabel transfercardnumberlabel = createLabel(280, 350, 300, 20, "شماره کارت مقصد را وارد کنید:", Color.BLACK, 16);
+        JLabel transfercardnumberlabel = createLabel(280, 350, 300, 20, "شماره کارت مقصد را وارد کنید:", Color.WHITE, 20);
 
 ////////////////////////////// Transfer Money Text /////////////////////////////////////////
-        JLabel transfermoneylabel = createLabel(280, 200, 300, 20, "مبلغ مورد نظر را وارد کنید:", Color.BLACK, 16);
+        JLabel transfermoneylabel = createLabel(280, 200, 300, 20, "مبلغ مورد نظر را وارد کنید:", Color.WHITE, 20);
 
 ////////////////////////////// Transfer Page Back Button /////////////////////////////////////////
-        JButton transferback = createButton("برگشت", 350, 500, 100, 50, 16, Color.black, new Color(51, 131, 156));
+        JButton transferback = createButton("برگشت", 350, 600, 100, 50, 16, Color.black, new Color(51, 131, 156));
         transferback.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -262,7 +268,7 @@ public class ATM {
             }
         });
 ////////////////////////////// Transfer Submit Button /////////////////////////////////////////
-        JButton submittransfer = createButton("تایید", 250, 500, 100, 50, 16, Color.BLACK, Color.lightGray);
+        JButton submittransfer = createButton("تایید", 250, 600, 100, 50, 16, Color.BLACK, Color.lightGray);
         submittransfer.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -299,43 +305,75 @@ public class ATM {
                 pagemain.setVisible(true);
             }
         });
+
+
 //////////////////////////////  Language Page Components /////////////////////////////////////////
+
         pagelanguage.add(EnglishButton);
         pagelanguage.add(persianButton);
         pagelanguage.add(persianLabel);
         pagelanguage.add(EnglishLabel);
-
+        //  pagelanguage.add(newbutton);
 //////////////////////////////  Password Page Components /////////////////////////////////////////
         pagepassword.add(EnterPassLabel);
         pagepassword.add(EnterPassField);
         pagepassword.add(SubmitButton);
+        pagepassword.add(BackGround);
 //////////////////////////////  Main Page Components  /////////////////////////////////////////
         pagemain.add(ChangePass);
         pagemain.add(withdrawal);
         pagemain.add(Inventory_announcement);
         pagemain.add(transfer);
         pagemain.add(BacktoFirstPage);
+
 //////////////////////////////  Change Password Page Components /////////////////////////////////////////
+
+        ImageIcon imageChangePassword = new ImageIcon("Test3.jpg");
+        JLabel BackGroundChangePassword = new JLabel("", imageChangePassword, JLabel.CENTER);
+        BackGroundChangePassword.setBounds(0, 0, 700, 500);
+
         changepasspage.add(EnterNewPassLabel);
         changepasspage.add(EnterNewPassField);
         changepasspage.add(submitnewpass);
         changepasspage.add(Backtolastpagenewpass);
+
+        changepasspage.add(BackGroundChangePassword);
 //////////////////////////////  Withdrawal Page Components /////////////////////////////////////////
+
+        ImageIcon imagewithdrawal = new ImageIcon("Test3.jpg");
+        JLabel backgroundimagewithdrawal = new JLabel("", imagewithdrawal, JLabel.CENTER);
+        backgroundimagewithdrawal.setBounds(0, 0, 700, 500);
+
         withdrawalpage.add(withdrawalfield);
         withdrawalpage.add(withdrawalsubmit);
         withdrawalpage.add(withdrawaltext);
         withdrawalpage.add(withdrawalback);
+        withdrawalpage.add(backgroundimagewithdrawal);
+
 //////////////////////////////  Cash Page Components /////////////////////////////////////////
+
+        ImageIcon imageCash = new ImageIcon("Test3.jpg");
+        JLabel BackGroundimageCash = new JLabel("", imageCash, JLabel.CENTER);
+        BackGroundimageCash.setBounds(0, 0, 700, 500);
+
         cash.add(cashlabel);
         cash.add(Backtolastpagecash);
         cash.add(cashsubmit);
+        cash.add(BackGroundimageCash);
+
 //////////////////////////////  Transfer Page Components /////////////////////////////////////////
+
+        ImageIcon imagetransferpage = new ImageIcon("Test3.jpg");
+        JLabel BackGroundtransferpage  = new JLabel("", imagetransferpage, JLabel.CENTER);
+        BackGroundtransferpage.setBounds(0, 0, 700, 500);
+
         transferpage.add(transfercardnumberfield);
         transferpage.add(transfermoneyfield);
         transferpage.add(transfercardnumberlabel);
         transferpage.add(transfermoneylabel);
         transferpage.add(transferback);
         transferpage.add(submittransfer);
+        transferpage.add(BackGroundtransferpage);
 //////////////////////////////  Last Page Components /////////////////////////////////////////
         lastpage.add(finalpagelabel);
         lastpage.add(backlastpage);
