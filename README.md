@@ -14,15 +14,18 @@ This is a simple ATM (Automated Teller Machine) simulation program implemented i
  
 ## $\textcolor{green}{Cash  \ withdrawal :\}$
 
-![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/43d45a3e-3dd5-424d-9365-9b321271e8bf)
+![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/6a27b200-4255-4099-910f-91831e82827b)
+
 
 ## $\textcolor{green}{Checking   \ account \ balance :\}$
 
-![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/b47c634e-46f6-4556-89a1-b1891067ba49)
+![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/9367363c-7cd2-41ad-8166-087e2e87e470)
+
 
 ## $\textcolor{green}{Transferring  \ money :\}$
 
-![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/4c402c68-808f-485e-9cd1-6f4dc16f4163)
+![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/c7531835-6481-420c-a608-f415f98587a6)
+
 
 
 ## Getting Started
