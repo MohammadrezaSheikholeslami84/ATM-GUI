@@ -9,7 +9,8 @@ This is a simple ATM (Automated Teller Machine) simulation program implemented i
 
 ## $\textcolor{green}{Password \ Management:\}$
 
-![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/b7f13af9-95e5-4f33-a55a-afe5513723ce)             ![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/0b022657-e5f1-444b-a91a-61be6f723ebf)
+![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/f8e7e0d7-dad6-437d-aa21-6b106f1c268b)     ![image](https://github.com/MohammadrezaSheikholeslami84/ATM-GUI/assets/166950228/95a2ccf1-6fa5-480e-b0ce-ab44a33f9f27)
+
  
 ## $\textcolor{green}{Cash  \ withdrawal :\}$
 
